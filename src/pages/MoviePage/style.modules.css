@@ -1,0 +1,13 @@
+.movie-box{
+    margin:20px 30%;
+}
+
+.rating-area{
+    width: 30%;
+    margin: 2px;
+    padding: 5px;
+}
+
+.text-area{
+    text-justify: auto;
+}

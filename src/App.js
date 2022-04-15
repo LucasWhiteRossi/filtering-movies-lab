@@ -1,18 +1,16 @@
-import {Card} from './components/Card'
-import movies from './data/movies'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import {Home} from './pages/Home'
+import { MoviePage } from './pages/MoviePage';
 
 function App() {
 
-  const filtered = movies.filter((movie)=>{ return movie.vote_average > 7})
-
   return (
-    <div className="App">
-      {filtered.map((currentMovie)=>{
-        return (
-          <Card movie={currentMovie}/>
-        )
-      })}
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/movie/:movieName" element={<MoviePage/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
